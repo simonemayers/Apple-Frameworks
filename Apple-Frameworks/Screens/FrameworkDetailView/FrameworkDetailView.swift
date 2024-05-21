@@ -9,25 +9,16 @@ import SwiftUI
 
 struct FrameworkDetailView: View {
     var framework: Framework
+    @Binding var isShowingModalView: Bool
+    @State private var isShowingSafariView = false
     
     var body: some View {
             VStack {
-                HStack{
-                    Spacer()
-                    Button {
-                        
-                    }label: {
-                        Image(systemName: "xmark")
-                            .foregroundStyle(Color(.label))
-                            .imageScale(.large)
-                            .frame(width: 44, height: 44)
-                    }
-                }
-                .padding()
+                XDismissButton(isShowingModalView: $isShowingModalView)
      
                 Spacer()
                 
-                FrameTitleView(framework: framework)
+                FrameworkTitleView(framework: framework)
                 Text(framework.description)
                     .padding()
                     .font(.body)
@@ -35,16 +26,19 @@ struct FrameworkDetailView: View {
                 Spacer()
                 
                 Button{
-                
+                    isShowingSafariView = true
                 } label: {
                     AFButton(title: "Learn More")
                 }
             }
+            .sheet(isPresented: $isShowingSafariView, content: {
+                SafariView(url: (URL(string: framework.urlString) ?? URL(string: "www.apple.com")!))
+            })
         }
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework)
+    FrameworkDetailView(framework: MockData.sampleFramework, isShowingModalView: .constant(false))
 }
 
 
