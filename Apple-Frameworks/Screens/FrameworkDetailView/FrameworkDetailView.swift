@@ -9,15 +9,10 @@ import SwiftUI
 
 struct FrameworkDetailView: View {
     var framework: Framework
-    @Binding var isShowingModalView: Bool
     @State private var isShowingSafariView = false
     
     var body: some View {
             VStack {
-                XDismissButton(isShowingModalView: $isShowingModalView)
-     
-                Spacer()
-                
                 FrameworkTitleView(framework: framework)
                 Text(framework.description)
                     .padding()
@@ -38,7 +33,7 @@ struct FrameworkDetailView: View {
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework, isShowingModalView: .constant(false))
+    FrameworkDetailView(framework: MockData.sampleFramework)
 }
 
 

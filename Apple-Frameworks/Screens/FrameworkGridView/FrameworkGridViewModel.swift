@@ -9,12 +9,6 @@ import SwiftUI
 
 final class FrameworkGridViewModel: ObservableObject {
     
-    var selectedFramework: Framework? {
-        didSet { isShowingModalView = true }
-    }
-    
-    @Published var isShowingModalView = false
-    
     let columns: [GridItem] = [GridItem(.flexible()),
                                GridItem(.flexible()),
                                GridItem(.flexible())
