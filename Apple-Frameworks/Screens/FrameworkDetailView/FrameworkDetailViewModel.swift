@@ -11,7 +11,6 @@ final class FrameworkDetailViewModel: ObservableObject {
     
     let framework: Framework
     var isShowingModalView: Binding<Bool>
-    @Published var isShowingSafariView = false
     
     init(framework: Framework, isShowingModalView: Binding<Bool>) {
         self.framework = framework

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EB3831562BFD165500E54DF3 /* FrameworkGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3831552BFD165500E54DF3 /* FrameworkGridViewModel.swift */; };
-		EB3831582BFD2CE900E54DF3 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3831572BFD2CE900E54DF3 /* SafariView.swift */; };
 		EB38315A2BFD31EC00E54DF3 /* FrameworkTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3831592BFD31EC00E54DF3 /* FrameworkTitleView.swift */; };
 		EB38315C2BFD32D100E54DF3 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB38315B2BFD32D100E54DF3 /* XDismissButton.swift */; };
 		EB51B76A2C08BE9400B6C476 /* FrameworkDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB51B7692C08BE9400B6C476 /* FrameworkDetailViewModel.swift */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		EB3831552BFD165500E54DF3 /* FrameworkGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkGridViewModel.swift; sourceTree = "<group>"; };
-		EB3831572BFD2CE900E54DF3 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		EB3831592BFD31EC00E54DF3 /* FrameworkTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkTitleView.swift; sourceTree = "<group>"; };
 		EB38315B2BFD32D100E54DF3 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		EB51B7692C08BE9400B6C476 /* FrameworkDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkDetailViewModel.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 		EB3831642BFD36AF00E54DF3 /* UIKit Components */ = {
 			isa = PBXGroup;
 			children = (
-				EB3831572BFD2CE900E54DF3 /* SafariView.swift */,
 			);
 			path = "UIKit Components";
 			sourceTree = "<group>";
@@ -234,7 +231,6 @@
 				EBA635B22BF698C700DBA7E0 /* Apple_FrameworksApp.swift in Sources */,
 				EB3831562BFD165500E54DF3 /* FrameworkGridViewModel.swift in Sources */,
 				EB38315A2BFD31EC00E54DF3 /* FrameworkTitleView.swift in Sources */,
-				EB3831582BFD2CE900E54DF3 /* SafariView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

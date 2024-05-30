@@ -24,15 +24,10 @@ struct FrameworkDetailView: View {
                 
                 Spacer()
                 
-                Button{
-                    vm.isShowingSafariView = true
-                } label: {
+                Link(destination: URL(string: vm.framework.urlString) ?? URL(string: "www.apple.com")!) {
                     AFButton(title: "Learn More")
                 }
             }
-            .sheet(isPresented: $vm.isShowingSafariView, content: {
-                SafariView(url: (URL(string: vm.framework.urlString) ?? URL(string: "www.apple.com")!))
-            })
         }
 }
 
