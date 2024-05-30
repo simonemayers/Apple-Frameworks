@@ -8,32 +8,36 @@
 import SwiftUI
 
 struct FrameworkDetailView: View {
-    var framework: Framework
-    @State private var isShowingSafariView = false
+    @ObservedObject var vm: FrameworkDetailViewModel
     
     var body: some View {
             VStack {
-                FrameworkTitleView(framework: framework)
-                Text(framework.description)
+                XDismissButton(isShowingModalView: $vm.isShowingModalView.wrappedValue)
+                
+                Spacer()
+                
+                FrameworkTitleView(framework: vm.framework)
+                
+                Text(vm.framework.description)
                     .padding()
                     .font(.body)
                 
                 Spacer()
                 
                 Button{
-                    isShowingSafariView = true
+                    vm.isShowingSafariView = true
                 } label: {
                     AFButton(title: "Learn More")
                 }
             }
-            .sheet(isPresented: $isShowingSafariView, content: {
-                SafariView(url: (URL(string: framework.urlString) ?? URL(string: "www.apple.com")!))
+            .sheet(isPresented: $vm.isShowingSafariView, content: {
+                SafariView(url: (URL(string: vm.framework.urlString) ?? URL(string: "www.apple.com")!))
             })
         }
 }
 
 #Preview {
-    FrameworkDetailView(framework: MockData.sampleFramework)
+    FrameworkDetailView(vm: FrameworkDetailViewModel(framework: MockData.sampleFramework, isShowingModalView: .constant(false)))
 }
 
 
